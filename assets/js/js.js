@@ -1,4 +1,4 @@
-$(document).ready(function( $ ){
+$(document).ready(function( $ ) {
 
 let thehours = new Date().getHours();
 let backNine = document.querySelector('#backNine')
@@ -6,8 +6,7 @@ let themessage;
 let morning = ('Good morning');
 let afternoon = ('Good afternoon');
 let evening = ('Good evening');
-let primaryTime = moment();
-$("#primaryTime").text(primaryTime.format('dddd, MMMM Do YYYY'));
+let primaryTime = moment(); $("#primaryTime").text(primaryTime.format('dddd, MMMM Do YYYY'));
 
 
 /*------------------------- 9:00 AM ----------------------------*/
@@ -28,7 +27,7 @@ function writeTaskNine() {
 if (thehours >= 0 && thehours < 8) {
 	themessage = morning;
 $(backNine).css("background-color","#d3d3d3");	
-} else if (thehours == 9) {
+} else if (thehours == 1) {
 	themessage = afternoon;
 $(backNine).css("background-color","#ff6961");	
 } else if (thehours >= 10 && thehours < 24) {
@@ -74,12 +73,12 @@ $(backTen).append(themessage);
 let inputEleven = document.querySelector('.writeTaskEleven');
 let outputEleven = document.querySelector('.writeTaskEleven');
 let saveEleven= document.querySelector('#clipEleven');
-/*---------- ----------*/
+
 saveEleven.addEventListener('click', writeTaskEleven);
-/*---------- ----------*/
+
 outputEleven.textContent = localStorage.getItem('taskEleven');
 inputEleven.value = localStorage.getItem('taskEleven');
-/*---------- ----------*/
+
 function writeTaskEleven() {
 	localStorage.setItem('taskEleven', inputEleven.value);
 	outputEleven.textContent = inputEleven.value;
@@ -104,12 +103,12 @@ $(backEleven).append(themessage);
 let inputTwelve = document.querySelector('.writeTaskTwelve');
 let outputTwelve = document.querySelector('.writeTaskTwelve');
 let saveTwelve= document.querySelector('#clipTwelve');
-/*---------- ----------*/
+
 saveTwelve.addEventListener('click', writeTaskTwelve);
-/*---------- ----------*/
+
 outputTwelve.textContent = localStorage.getItem('taskTwelve');
 inputTwelve.value = localStorage.getItem('taskTwelve');
-/*---------- ----------*/
+
 function writeTaskTwelve() {
 	localStorage.setItem('taskTwelve', inputTwelve.value);
 	outputTwelve.textContent = inputTwelve.value;
@@ -151,7 +150,7 @@ $(backOne).css("background-color","#d3d3d3");
 } else if (thehours == 13) {
 	themessage = afternoon;
 $(backOne).css("background-color","#ff6961");	
-} else if (thehours >= 14 && thehours < 24) {
+} else if (thehours >= 1 && thehours < 24) {
 	themessage = evening;
 $(backOne).css("background-color","#77dd77");
 }	
@@ -194,12 +193,12 @@ $(backTwo).append(themessage);
 let inputThree = document.querySelector('.writeTaskThree');
 let outputThree = document.querySelector('.writeTaskThree');
 let saveThree= document.querySelector('#clipThree');
-/*---------- ----------*/
+
 saveThree.addEventListener('click', writeTaskThree);
-/*---------- ----------*/
+
 outputThree.textContent = localStorage.getItem('taskThree');
 inputThree.value = localStorage.getItem('taskThree');
-/*---------- ----------*/
+
 function writeTaskThree() {
 	localStorage.setItem('taskThree', inputThree.value);
 	outputThree.textContent = inputThree.value;
@@ -224,12 +223,12 @@ $(backThree).append(themessage);
 let inputFour = document.querySelector('.writeTaskFour');
 let outputFour = document.querySelector('.writeTaskFour');
 let saveFour= document.querySelector('#clipFour');
-/*---------- ----------*/
+
 saveFour.addEventListener('click', writeTaskFour);
-/*---------- ----------*/
+
 outputFour.textContent = localStorage.getItem('taskFour');
 inputFour.value = localStorage.getItem('taskFour');
-/*---------- ----------*/
+
 function writeTaskFour() {
 	localStorage.setItem('taskFour', inputFour.value);
 	outputFour.textContent = inputFour.value;
@@ -254,30 +253,29 @@ $(backFour).append(themessage);
 let inputFive = document.querySelector('.writeTaskFive');
 let outputFive = document.querySelector('.writeTaskFive');
 let saveFive= document.querySelector('#clipFive');
-/*---------- ----------*/
+
 saveFive.addEventListener('click', writeTaskFive);
-/*---------- ----------*/
+
 outputFive.textContent = localStorage.getItem('taskFive');
 inputFive.value = localStorage.getItem('taskFive');
-/*---------- ----------*/
+
 function writeTaskFive() {
 	localStorage.setItem('taskFive', inputFive.value);
 	outputFive.textContent = inputFive.value;
 }
 
-if (thehours >= 0 && thehours < 15) {
+if (thehours >= 0 && thehours < 17) {
 	themessage = morning;
 $(backFive).css("background-color","#d3d3d3");	
-} else if (thehours == 16) {
+} else if (thehours == 18) {
 	themessage = afternoon;
 $(backFive).css("background-color","#ff6961");	
-} else if (thehours >= 17 && thehours < 24) {
+} else if (thehours >= 19 && thehours < 24) {
 	themessage = evening;
 $(backFive).css("background-color","#77dd77");
 }	
 
 $(backFive).append(themessage);
-
 /*--------------------------------------------------------------*/
 
 });
