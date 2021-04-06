@@ -64,6 +64,7 @@ h1 {
 
 #back2 {
     flex: 90%;
+    flex-direction: column;
     justify-content: start;
     background-color: lightgreen;
     padding-top: 10px;
@@ -85,3 +86,10 @@ h1 {
     font-size: 2em;
     color: rgb(63, 63, 63)
 }
+
+#test {
+    min-height: 85px;  
+    overflow: auto; 
+    resize: none;
+    width: auto;
+  }
