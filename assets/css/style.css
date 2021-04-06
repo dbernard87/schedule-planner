@@ -70,7 +70,7 @@ textarea {
     white-space: nowrap;
 }
 
-#back2 {
+#backNine, #backTen, #backEleven,#backTwelve, #backOne, #backTwo, #backThree,#backFour, #backFive {
     flex: 90%;
     flex-direction: column;
     justify-content: start;
@@ -100,4 +100,25 @@ textarea {
     overflow: auto; 
     resize: none;
     width: auto;
+  }
+
+  .hour {
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px dashed #000000;
+  }
+  
+  .past {
+    background-color: #d3d3d3;
+    color: white;
+  }
+  
+  .present {
+    background-color: #ff6961;
+    color: red;
+  }
+  
+  .future {
+    background-color: #77dd77;
+    color: blue;
   }
