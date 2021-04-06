@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(63, 63, 63);
+    padding-bottom: 50px;
+}
+
+h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#primaryHeading {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(63, 63, 63);
+    color: whitesmoke;
+}
+
+#primaryTime {
+    text-align: center;
+    background-color: rgb(63, 63, 63);
+    padding-bottom: 50px;
+    color: whitesmoke;
+}
+
+.containerNew {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+}
+
+.row {
+    display: inline-flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flex-wrap: nowrap;
+}
+
+#back1 {
+    min-width: 80px;
+    max-width: 80px;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    white-space: nowrap;
+}
+
+#back2 {
+    flex: 90%;
+    justify-content: start;
+    background-color: lightgreen;
+    padding-top: 10px;
+    min-height: 104px;
+}
+
+#back3 {
+    min-width: 80px;
+    max-width: 80px;
+    justify-content: center;
+    background-color: lightskyblue;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.fas {
+    font-size: 2em;
+    color: rgb(63, 63, 63)
+}
