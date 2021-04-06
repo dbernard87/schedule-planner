@@ -25,18 +25,13 @@ function writeTaskNine() {
 }
 
 if (thehours >= 0 && thehours < 8) {
-	themessage = morning;
 $(backNine).css("background-color","#d3d3d3");	
 } else if (thehours == 1) {
-	themessage = afternoon;
 $(backNine).css("background-color","#ff6961");	
 } else if (thehours >= 10 && thehours < 24) {
-	themessage = evening;
 $(backNine).css("background-color","#77dd77");
 }	
-
 $(backNine).append(themessage);
-/*--------------------------------------------------------------*/
 
 
 /*------------------------- 10:00 AM ---------------------------*/
@@ -55,18 +50,13 @@ function writeTaskTen() {
 }
 
 if (thehours >= 0 && thehours < 9) {
-	themessage = morning;
 $(backTen).css("background-color","#d3d3d3");	
 } else if (thehours == 10) {
-	themessage = afternoon;
 $(backTen).css("background-color","#ff6961");	
 } else if (thehours >= 11 && thehours < 24) {
-	themessage = evening;
 $(backTen).css("background-color","#77dd77");
 }	
-
 $(backTen).append(themessage);
-/*--------------------------------------------------------------*/
 
 
 /*------------------------- 11:00 AM ---------------------------*/
@@ -85,18 +75,13 @@ function writeTaskEleven() {
 }
 
 if (thehours >= 0 && thehours < 10) {
-	themessage = morning;
 $(backEleven).css("background-color","#d3d3d3");	
 } else if (thehours == 11) {
-	themessage = afternoon;
 $(backEleven).css("background-color","#ff6961");	
 } else if (thehours >= 12 && thehours < 24) {
-	themessage = evening;
 $(backEleven).css("background-color","#77dd77");
 }	
-
 $(backEleven).append(themessage);
-/*--------------------------------------------------------------*/
 
 
 /*------------------------- 12:00 PM ---------------------------*/
@@ -115,18 +100,13 @@ function writeTaskTwelve() {
 }
 
 if (thehours >= 0 && thehours < 11) {
-	themessage = morning;
 $(backTwelve).css("background-color","#d3d3d3");	
 } else if (thehours == 12) {
-	themessage = afternoon;
 $(backTwelve).css("background-color","#ff6961");	
 } else if (thehours >= 13 && thehours < 24) {
-	themessage = evening;
 $(backTwelve).css("background-color","#77dd77");
 }	
-
 $(backTwelve).append(themessage);
-/*--------------------------------------------------------------*/
 
 
 /*------------------------- 1:00 PM ---------------------------*/
@@ -145,18 +125,13 @@ function writeTaskOne() {
 }
 
 if (thehours >= 0 && thehours < 12) {
-	themessage = morning;
 $(backOne).css("background-color","#d3d3d3");	
 } else if (thehours == 13) {
-	themessage = afternoon;
 $(backOne).css("background-color","#ff6961");	
 } else if (thehours >= 1 && thehours < 24) {
-	themessage = evening;
 $(backOne).css("background-color","#77dd77");
 }	
-
 $(backOne).append(themessage);
-/*--------------------------------------------------------------*/
 
 
 /*-------------------------- 2:00 PM ---------------------------*/
@@ -175,18 +150,13 @@ function writeTaskTwo() {
 }
 
 if (thehours >= 0 && thehours < 13) {
-	themessage = morning;
 $(backTwo).css("background-color","#d3d3d3");	
 } else if (thehours == 14) {
-	themessage = afternoon;
 $(backTwo).css("background-color","#ff6961");	
 } else if (thehours >= 15 && thehours < 24) {
-	themessage = evening;
 $(backTwo).css("background-color","#77dd77");
 }	
-
 $(backTwo).append(themessage);
-/*--------------------------------------------------------------*/
 
 
 /*-------------------------- 3:00 PM ---------------------------*/
@@ -205,18 +175,13 @@ function writeTaskThree() {
 }
 
 if (thehours >= 0 && thehours < 14) {
-	themessage = morning;
 $(backThree).css("background-color","#d3d3d3");	
 } else if (thehours == 15) {
-	themessage = afternoon;
 $(backThree).css("background-color","#ff6961");	
 } else if (thehours >= 16 && thehours < 24) {
-	themessage = evening;
 $(backThree).css("background-color","#77dd77");
 }	
-
 $(backThree).append(themessage);
-/*--------------------------------------------------------------*/
 
 
 /*-------------------------- 4:00 PM ---------------------------*/
@@ -235,18 +200,13 @@ function writeTaskFour() {
 }
 
 if (thehours >= 0 && thehours < 15) {
-	themessage = morning;
 $(backFour).css("background-color","#d3d3d3");	
 } else if (thehours == 16) {
-	themessage = afternoon;
 $(backFour).css("background-color","#ff6961");	
 } else if (thehours >= 17 && thehours < 24) {
-	themessage = evening;
 $(backFour).css("background-color","#77dd77");
 }	
-
 $(backFour).append(themessage);
-/*--------------------------------------------------------------*/
 
 
 /*-------------------------- 5:00 PM ---------------------------*/
@@ -265,17 +225,12 @@ function writeTaskFive() {
 }
 
 if (thehours >= 0 && thehours < 17) {
-	themessage = morning;
 $(backFive).css("background-color","#d3d3d3");	
 } else if (thehours == 18) {
-	themessage = afternoon;
 $(backFive).css("background-color","#ff6961");	
 } else if (thehours >= 19 && thehours < 24) {
-	themessage = evening;
 $(backFive).css("background-color","#77dd77");
 }	
-
 $(backFive).append(themessage);
-/*--------------------------------------------------------------*/
 
 });
