@@ -1,236 +1,209 @@
-$(document).ready(function( $ ) {
+	let theTime = moment().hour();
+	let primaryTime = moment(); $("#primaryTime").text(primaryTime.format('dddd, MMMM Do YYYY'));
+	
+	/*------------------------- 9:00 AM ----------------------------*/
+	let inputNine = document.querySelector('.writeTaskNine');
+	let outputNine = document.querySelector('.writeTaskNine');
+	let saveNine = document.querySelector('#clipNine');
 
-let thehours = new Date().getHours();
-let backNine = document.querySelector('#backNine')
-let themessage;
-let morning = ('Good morning');
-let afternoon = ('Good afternoon');
-let evening = ('Good evening');
-let primaryTime = moment(); $("#primaryTime").text(primaryTime.format('dddd, MMMM Do YYYY'));
+	saveNine.addEventListener('click', writeTaskNine);
 
+	outputNine.textContent = localStorage.getItem('taskNine');
+	inputNine.value = localStorage.getItem('taskNine');
 
-/*------------------------- 9:00 AM ----------------------------*/
-let inputNine = document.querySelector('.writeTaskNine');
-let outputNine = document.querySelector('.writeTaskNine');
-let saveNine = document.querySelector('#clipNine');
+	function writeTaskNine() {
+		localStorage.setItem('taskNine', inputNine.value);
+		outputNine.textContent = inputNine.value;
+	}
 
-saveNine.addEventListener('click', writeTaskNine);
+	if (theTime >= 0 && theTime < 8) {
+		$(backNine).css("background-color", "#77dd77");
+	} else if (theTime == 9) {
+		$(backNine).css("background-color", "#ff6961");
+	} else if (theTime >= 10 && theTime < 24) {
+		$(backNine).css("background-color", "#d3d3d3");
+	}
 
-outputNine.textContent = localStorage.getItem('taskNine');
-inputNine.value = localStorage.getItem('taskNine');
+	/*------------------------- 10:00 AM ---------------------------*/
+	let inputTen = document.querySelector('.writeTaskTen');
+	let outputTen = document.querySelector('.writeTaskTen');
+	let saveTen = document.querySelector('#clipTen');
 
-function writeTaskNine() {
-	localStorage.setItem('taskNine', inputNine.value);
-	outputNine.textContent = inputNine.value;
-}
+	saveTen.addEventListener('click', writeTaskTen);
 
-if (thehours >= 0 && thehours < 8) {
-$(backNine).css("background-color","#d3d3d3");	
-} else if (thehours == 1) {
-$(backNine).css("background-color","#ff6961");	
-} else if (thehours >= 10 && thehours < 24) {
-$(backNine).css("background-color","#77dd77");
-}	
-$(backNine).append(themessage);
+	outputTen.textContent = localStorage.getItem('taskTen');
+	inputTen.value = localStorage.getItem('taskTen');
 
+	function writeTaskTen() {
+		localStorage.setItem('taskTen', inputTen.value);
+		outputTen.textContent = inputTen.value;
+	}
 
-/*------------------------- 10:00 AM ---------------------------*/
-let inputTen = document.querySelector('.writeTaskTen');
-let outputTen = document.querySelector('.writeTaskTen');
-let saveTen= document.querySelector('#clipTen');
+	if (theTime >= 0 && theTime < 9) {
+		$(backTen).css("background-color", "#77dd77");
+	} else if (theTime == 10) {
+		$(backTen).css("background-color", "#ff6961");
+	} else if (theTime >= 11 && theTime < 24) {
+		$(backTen).css("background-color", "#d3d3d3");
+	}
 
-saveTen.addEventListener('click', writeTaskTen);
+	/*------------------------- 11:00 AM ---------------------------*/
+	let inputEleven = document.querySelector('.writeTaskEleven');
+	let outputEleven = document.querySelector('.writeTaskEleven');
+	let saveEleven = document.querySelector('#clipEleven');
 
-outputTen.textContent = localStorage.getItem('taskTen');
-inputTen.value = localStorage.getItem('taskTen');
+	saveEleven.addEventListener('click', writeTaskEleven);
 
-function writeTaskTen() {
-	localStorage.setItem('taskTen', inputTen.value);
-	outputTen.textContent = inputTen.value;
-}
+	outputEleven.textContent = localStorage.getItem('taskEleven');
+	inputEleven.value = localStorage.getItem('taskEleven');
 
-if (thehours >= 0 && thehours < 9) {
-$(backTen).css("background-color","#d3d3d3");	
-} else if (thehours == 10) {
-$(backTen).css("background-color","#ff6961");	
-} else if (thehours >= 11 && thehours < 24) {
-$(backTen).css("background-color","#77dd77");
-}	
-$(backTen).append(themessage);
+	function writeTaskEleven() {
+		localStorage.setItem('taskEleven', inputEleven.value);
+		outputEleven.textContent = inputEleven.value;
+	}
 
+	if (theTime >= 0 && theTime < 10) {
+		$(backEleven).css("background-color", "#77dd77");
+	} else if (theTime == 11) {
+		$(backEleven).css("background-color", "#ff6961");
+	} else if (theTime >= 12 && theTime < 24) {
+		$(backEleven).css("background-color", "#d3d3d3");
+	}
+	
+	/*------------------------- 12:00 PM ---------------------------*/
+	let inputTwelve = document.querySelector('.writeTaskTwelve');
+	let outputTwelve = document.querySelector('.writeTaskTwelve');
+	let saveTwelve = document.querySelector('#clipTwelve');
 
-/*------------------------- 11:00 AM ---------------------------*/
-let inputEleven = document.querySelector('.writeTaskEleven');
-let outputEleven = document.querySelector('.writeTaskEleven');
-let saveEleven= document.querySelector('#clipEleven');
+	saveTwelve.addEventListener('click', writeTaskTwelve);
 
-saveEleven.addEventListener('click', writeTaskEleven);
+	outputTwelve.textContent = localStorage.getItem('taskTwelve');
+	inputTwelve.value = localStorage.getItem('taskTwelve');
 
-outputEleven.textContent = localStorage.getItem('taskEleven');
-inputEleven.value = localStorage.getItem('taskEleven');
+	function writeTaskTwelve() {
+		localStorage.setItem('taskTwelve', inputTwelve.value);
+		outputTwelve.textContent = inputTwelve.value;
+	}
 
-function writeTaskEleven() {
-	localStorage.setItem('taskEleven', inputEleven.value);
-	outputEleven.textContent = inputEleven.value;
-}
+	if (theTime >= 0 && theTime < 11) {
+		$(backTwelve).css("background-color", "#77dd77");
+	} else if (theTime == 12) {
+		$(backTwelve).css("background-color", "#ff6961");
+	} else if (theTime >= 13 && theTime < 24) {
+		$(backTwelve).css("background-color", "#d3d3d3");
+	}
 
-if (thehours >= 0 && thehours < 10) {
-$(backEleven).css("background-color","#d3d3d3");	
-} else if (thehours == 11) {
-$(backEleven).css("background-color","#ff6961");	
-} else if (thehours >= 12 && thehours < 24) {
-$(backEleven).css("background-color","#77dd77");
-}	
-$(backEleven).append(themessage);
+	/*------------------------- 1:00 PM ---------------------------*/
+	let inputOne = document.querySelector('.writeTaskOne');
+	let outputOne = document.querySelector('.writeTaskOne');
+	let saveOne = document.querySelector('#clipOne');
 
+	saveOne.addEventListener('click', writeTaskOne);
 
-/*------------------------- 12:00 PM ---------------------------*/
-let inputTwelve = document.querySelector('.writeTaskTwelve');
-let outputTwelve = document.querySelector('.writeTaskTwelve');
-let saveTwelve= document.querySelector('#clipTwelve');
+	outputOne.textContent = localStorage.getItem('taskOne');
+	inputOne.value = localStorage.getItem('taskOne');
 
-saveTwelve.addEventListener('click', writeTaskTwelve);
+	function writeTaskOne() {
+		localStorage.setItem('taskOne', inputOne.value);
+		outputOne.textContent = inputOne.value;
+	}
 
-outputTwelve.textContent = localStorage.getItem('taskTwelve');
-inputTwelve.value = localStorage.getItem('taskTwelve');
+	if (theTime >= 0 && theTime < 12) {
+		$(backOne).css("background-color", "#77dd77");
+	} else if (theTime == 13) {
+		$(backOne).css("background-color", "#ff6961");
+	} else if (theTime >= 14 && theTime < 24) {
+		$(backOne).css("background-color", "#d3d3d3");
+	}
 
-function writeTaskTwelve() {
-	localStorage.setItem('taskTwelve', inputTwelve.value);
-	outputTwelve.textContent = inputTwelve.value;
-}
+	/*-------------------------- 2:00 PM ---------------------------*/
+	let inputTwo = document.querySelector('.writeTaskTwo');
+	let outputTwo = document.querySelector('.writeTaskTwo');
+	let saveTwo = document.querySelector('#clipTwo');
 
-if (thehours >= 0 && thehours < 11) {
-$(backTwelve).css("background-color","#d3d3d3");	
-} else if (thehours == 12) {
-$(backTwelve).css("background-color","#ff6961");	
-} else if (thehours >= 13 && thehours < 24) {
-$(backTwelve).css("background-color","#77dd77");
-}	
-$(backTwelve).append(themessage);
+	saveTwo.addEventListener('click', writeTaskTwo);
 
+	outputTwo.textContent = localStorage.getItem('taskTwo');
+	inputTwo.value = localStorage.getItem('taskTwo');
 
-/*------------------------- 1:00 PM ---------------------------*/
-let inputOne = document.querySelector('.writeTaskOne');
-let outputOne = document.querySelector('.writeTaskOne');
-let saveOne= document.querySelector('#clipOne');
+	function writeTaskTwo() {
+		localStorage.setItem('taskTwo', inputTwo.value);
+		outputTwo.textContent = inputTwo.value;
+	}
 
-saveOne.addEventListener('click', writeTaskOne);
+	if (theTime >= 0 && theTime < 13) {
+		$(backTwo).css("background-color", "#77dd77");
+	} else if (theTime == 14) {
+		$(backTwo).css("background-color", "#ff6961");
+	} else if (theTime >= 15 && theTime < 24) {
+		$(backTwo).css("background-color", "#d3d3d3");
+	}
 
-outputOne.textContent = localStorage.getItem('taskOne');
-inputOne.value = localStorage.getItem('taskOne');
+	/*-------------------------- 3:00 PM ---------------------------*/
+	let inputThree = document.querySelector('.writeTaskThree');
+	let outputThree = document.querySelector('.writeTaskThree');
+	let saveThree = document.querySelector('#clipThree');
 
-function writeTaskOne() {
-	localStorage.setItem('taskOne', inputOne.value);
-	outputOne.textContent = inputOne.value;
-}
+	saveThree.addEventListener('click', writeTaskThree);
 
-if (thehours >= 0 && thehours < 12) {
-$(backOne).css("background-color","#d3d3d3");	
-} else if (thehours == 13) {
-$(backOne).css("background-color","#ff6961");	
-} else if (thehours >= 1 && thehours < 24) {
-$(backOne).css("background-color","#77dd77");
-}	
-$(backOne).append(themessage);
+	outputThree.textContent = localStorage.getItem('taskThree');
+	inputThree.value = localStorage.getItem('taskThree');
 
+	function writeTaskThree() {
+		localStorage.setItem('taskThree', inputThree.value);
+		outputThree.textContent = inputThree.value;
+	}
 
-/*-------------------------- 2:00 PM ---------------------------*/
-let inputTwo = document.querySelector('.writeTaskTwo');
-let outputTwo = document.querySelector('.writeTaskTwo');
-let saveTwo= document.querySelector('#clipTwo');
+	if (theTime >= 0 && theTime < 14) {
+		$(backThree).css("background-color", "#77dd77");
+	} else if (theTime == 15) {
+		$(backThree).css("background-color", "#ff6961");
+	} else if (theTime >= 16 && theTime < 24) {
+		$(backThree).css("background-color", "#d3d3d3");
+	}
 
-saveTwo.addEventListener('click', writeTaskTwo);
+	/*-------------------------- 4:00 PM ---------------------------*/
+	let inputFour = document.querySelector('.writeTaskFour');
+	let outputFour = document.querySelector('.writeTaskFour');
+	let saveFour = document.querySelector('#clipFour');
 
-outputTwo.textContent = localStorage.getItem('taskTwo');
-inputTwo.value = localStorage.getItem('taskTwo');
+	saveFour.addEventListener('click', writeTaskFour);
 
-function writeTaskTwo() {
-	localStorage.setItem('taskTwo', inputTwo.value);
-	outputTwo.textContent = inputTwo.value;
-}
+	outputFour.textContent = localStorage.getItem('taskFour');
+	inputFour.value = localStorage.getItem('taskFour');
 
-if (thehours >= 0 && thehours < 13) {
-$(backTwo).css("background-color","#d3d3d3");	
-} else if (thehours == 14) {
-$(backTwo).css("background-color","#ff6961");	
-} else if (thehours >= 15 && thehours < 24) {
-$(backTwo).css("background-color","#77dd77");
-}	
-$(backTwo).append(themessage);
+	function writeTaskFour() {
+		localStorage.setItem('taskFour', inputFour.value);
+		outputFour.textContent = inputFour.value;
+	}
 
+	if (theTime >= 0 && theTime < 15) {
+		$(backFour).css("background-color", "#77dd77");
+	} else if (theTime == 16) {
+		$(backFour).css("background-color", "#ff6961");
+	} else if (theTime >= 17 && theTime < 24) {
+		$(backFour).css("background-color", "#d3d3d3");
+	}
 
-/*-------------------------- 3:00 PM ---------------------------*/
-let inputThree = document.querySelector('.writeTaskThree');
-let outputThree = document.querySelector('.writeTaskThree');
-let saveThree= document.querySelector('#clipThree');
+	/*-------------------------- 5:00 PM ---------------------------*/
+	let inputFive = document.querySelector('.writeTaskFive');
+	let outputFive = document.querySelector('.writeTaskFive');
+	let saveFive = document.querySelector('#clipFive');
 
-saveThree.addEventListener('click', writeTaskThree);
+	saveFive.addEventListener('click', writeTaskFive);
 
-outputThree.textContent = localStorage.getItem('taskThree');
-inputThree.value = localStorage.getItem('taskThree');
+	outputFive.textContent = localStorage.getItem('taskFive');
+	inputFive.value = localStorage.getItem('taskFive');
 
-function writeTaskThree() {
-	localStorage.setItem('taskThree', inputThree.value);
-	outputThree.textContent = inputThree.value;
-}
+	function writeTaskFive() {
+		localStorage.setItem('taskFive', inputFive.value);
+		outputFive.textContent = inputFive.value;
+	}
 
-if (thehours >= 0 && thehours < 14) {
-$(backThree).css("background-color","#d3d3d3");	
-} else if (thehours == 15) {
-$(backThree).css("background-color","#ff6961");	
-} else if (thehours >= 16 && thehours < 24) {
-$(backThree).css("background-color","#77dd77");
-}	
-$(backThree).append(themessage);
-
-
-/*-------------------------- 4:00 PM ---------------------------*/
-let inputFour = document.querySelector('.writeTaskFour');
-let outputFour = document.querySelector('.writeTaskFour');
-let saveFour= document.querySelector('#clipFour');
-
-saveFour.addEventListener('click', writeTaskFour);
-
-outputFour.textContent = localStorage.getItem('taskFour');
-inputFour.value = localStorage.getItem('taskFour');
-
-function writeTaskFour() {
-	localStorage.setItem('taskFour', inputFour.value);
-	outputFour.textContent = inputFour.value;
-}
-
-if (thehours >= 0 && thehours < 15) {
-$(backFour).css("background-color","#d3d3d3");	
-} else if (thehours == 16) {
-$(backFour).css("background-color","#ff6961");	
-} else if (thehours >= 17 && thehours < 24) {
-$(backFour).css("background-color","#77dd77");
-}	
-$(backFour).append(themessage);
-
-
-/*-------------------------- 5:00 PM ---------------------------*/
-let inputFive = document.querySelector('.writeTaskFive');
-let outputFive = document.querySelector('.writeTaskFive');
-let saveFive= document.querySelector('#clipFive');
-
-saveFive.addEventListener('click', writeTaskFive);
-
-outputFive.textContent = localStorage.getItem('taskFive');
-inputFive.value = localStorage.getItem('taskFive');
-
-function writeTaskFive() {
-	localStorage.setItem('taskFive', inputFive.value);
-	outputFive.textContent = inputFive.value;
-}
-
-if (thehours >= 0 && thehours < 17) {
-$(backFive).css("background-color","#d3d3d3");	
-} else if (thehours == 18) {
-$(backFive).css("background-color","#ff6961");	
-} else if (thehours >= 19 && thehours < 24) {
-$(backFive).css("background-color","#77dd77");
-}	
-$(backFive).append(themessage);
-
-});
+	if (theTime >= 0 && theTime < 16) {
+		$(backFive).css("background-color", "#77dd77");
+	} else if (theTime == 17) {
+		$(backFive).css("background-color", "#ff6961");
+	} else if (theTime >= 18 && theTime < 24) {
+		$(backFive).css("background-color", "#d3d3d3");
+	}
