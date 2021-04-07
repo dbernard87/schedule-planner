@@ -1,5 +1,5 @@
 	let theTime = moment().hour();
-	let primaryTime = moment(); $("#primaryTime").text(primaryTime.format('dddd, MMMM Do YYYY'));
+	let currentDay = moment(); $("#currentDay").text(currentDay.format('dddd, MMMM Do YYYY'));
 	
 	/*------------------------- 9:00 AM ----------------------------*/
 	let inputNine = document.querySelector('.writeTaskNine');
@@ -16,12 +16,12 @@
 		outputNine.textContent = inputNine.value;
 	}
 
-	if (theTime >= 0 && theTime < 8) {
-		$(backNine).css("background-color", "#77dd77");
-	} else if (theTime == 9) {
-		$(backNine).css("background-color", "#ff6961");
+	if (theTime >= 0 && theTime < 9) {
+		$(backNine).addClass("future");
+	} else if (theTime === 9) {
+		$(backNine).addClass("present");
 	} else if (theTime >= 10 && theTime < 24) {
-		$(backNine).css("background-color", "#d3d3d3");
+		$(backNine).addClass("past");
 	}
 
 	/*------------------------- 10:00 AM ---------------------------*/
@@ -39,12 +39,12 @@
 		outputTen.textContent = inputTen.value;
 	}
 
-	if (theTime >= 0 && theTime < 9) {
-		$(backTen).css("background-color", "#77dd77");
-	} else if (theTime == 10) {
-		$(backTen).css("background-color", "#ff6961");
+	if (theTime >= 0 && theTime < 10) {
+		$(backTen).addClass("future");
+	} else if (theTime === 10) {
+		$(backTen).addClass("present");
 	} else if (theTime >= 11 && theTime < 24) {
-		$(backTen).css("background-color", "#d3d3d3");
+		$(backTen).addClass("past");
 	}
 
 	/*------------------------- 11:00 AM ---------------------------*/
@@ -62,12 +62,12 @@
 		outputEleven.textContent = inputEleven.value;
 	}
 
-	if (theTime >= 0 && theTime < 10) {
-		$(backEleven).css("background-color", "#77dd77");
-	} else if (theTime == 11) {
-		$(backEleven).css("background-color", "#ff6961");
+	if (theTime >= 0 && theTime < 11) {
+		$(backEleven).addClass("future");
+	} else if (theTime === 11) {
+		$(backEleven).addClass("present");
 	} else if (theTime >= 12 && theTime < 24) {
-		$(backEleven).css("background-color", "#d3d3d3");
+		$(backEleven).addClass("past");
 	}
 	
 	/*------------------------- 12:00 PM ---------------------------*/
@@ -85,12 +85,12 @@
 		outputTwelve.textContent = inputTwelve.value;
 	}
 
-	if (theTime >= 0 && theTime < 11) {
-		$(backTwelve).css("background-color", "#77dd77");
-	} else if (theTime == 12) {
-		$(backTwelve).css("background-color", "#ff6961");
+	if (theTime >= 0 && theTime < 12) {
+		$(backTwelve).addClass("future");
+	} else if (theTime === 12) {
+		$(backTwelve).addClass("present");
 	} else if (theTime >= 13 && theTime < 24) {
-		$(backTwelve).css("background-color", "#d3d3d3");
+		$(backTwelve).addClass("past");
 	}
 
 	/*------------------------- 1:00 PM ---------------------------*/
@@ -108,12 +108,12 @@
 		outputOne.textContent = inputOne.value;
 	}
 
-	if (theTime >= 0 && theTime < 12) {
-		$(backOne).css("background-color", "#77dd77");
-	} else if (theTime == 13) {
-		$(backOne).css("background-color", "#ff6961");
+	if (theTime >= 0 && theTime < 13) {
+		$(backOne).addClass("future");
+	} else if (theTime === 13) {
+		$(backOne).addClass("present");
 	} else if (theTime >= 14 && theTime < 24) {
-		$(backOne).css("background-color", "#d3d3d3");
+		$(backOne).addClass("past");
 	}
 
 	/*-------------------------- 2:00 PM ---------------------------*/
@@ -131,12 +131,12 @@
 		outputTwo.textContent = inputTwo.value;
 	}
 
-	if (theTime >= 0 && theTime < 13) {
-		$(backTwo).css("background-color", "#77dd77");
-	} else if (theTime == 14) {
-		$(backTwo).css("background-color", "#ff6961");
+	if (theTime >= 0 && theTime < 14) {
+		$(backTwo).addClass("future");
+	} else if (theTime === 14) {
+		$(backTwo).addClass("present");
 	} else if (theTime >= 15 && theTime < 24) {
-		$(backTwo).css("background-color", "#d3d3d3");
+		$(backTwo).addClass("past");
 	}
 
 	/*-------------------------- 3:00 PM ---------------------------*/
@@ -154,12 +154,12 @@
 		outputThree.textContent = inputThree.value;
 	}
 
-	if (theTime >= 0 && theTime < 14) {
-		$(backThree).css("background-color", "#77dd77");
-	} else if (theTime == 15) {
-		$(backThree).css("background-color", "#ff6961");
+	if (theTime >= 0 && theTime < 15) {
+		$(backThree).addClass("future");
+	} else if (theTime === 15) {
+		$(backThree).addClass("present");
 	} else if (theTime >= 16 && theTime < 24) {
-		$(backThree).css("background-color", "#d3d3d3");
+		$(backThree).addClass("past");
 	}
 
 	/*-------------------------- 4:00 PM ---------------------------*/
@@ -177,12 +177,12 @@
 		outputFour.textContent = inputFour.value;
 	}
 
-	if (theTime >= 0 && theTime < 15) {
-		$(backFour).css("background-color", "#77dd77");
-	} else if (theTime == 16) {
-		$(backFour).css("background-color", "#ff6961");
+	if (theTime >= 0 && theTime < 16) {
+		$(backFour).addClass("future");
+	} else if (theTime === 16) {
+		$(backFour).addClass("present");
 	} else if (theTime >= 17 && theTime < 24) {
-		$(backFour).css("background-color", "#d3d3d3");
+		$(backFour).addClass("past");
 	}
 
 	/*-------------------------- 5:00 PM ---------------------------*/
@@ -200,10 +200,10 @@
 		outputFive.textContent = inputFive.value;
 	}
 
-	if (theTime >= 0 && theTime < 16) {
-		$(backFive).css("background-color", "#77dd77");
-	} else if (theTime == 17) {
-		$(backFive).css("background-color", "#ff6961");
+	if (theTime >= 0 && theTime < 17) {
+		$(backFive).addClass("future");
+	} else if (theTime === 17) {
+		$(backFive).addClass("present");
 	} else if (theTime >= 18 && theTime < 24) {
-		$(backFive).css("background-color", "#d3d3d3");
+		$(backFive).addClass("past");
 	}
